@@ -25,14 +25,30 @@ JOI Delivery, launched in 2024, is a hyperlocal delivery app designed to bring f
 As JOI Delivery continues to grow and serve more neighborhoods, we’re scaling our platform to handle increasing demand, enhance user experience, and support smarter delivery logistics. They're looking for passionate developers to help us build robust, efficient, and scalable solutions that power everything from order placement to real-time tracking.
 Your expertise will directly impact how quickly and reliably customers receive their essentials—and how smoothly local vendors and delivery partners operate within our ecosystem.
 
-### Users
+### Users/Customers
 Sample user profiles are available in the repository to support development and testing scenarios.
 
 | UserId   | FirstName | LastName|
 |----------|-----------|---------|
 | user101  | John      | Doe     |
 
-These values are used in the code and in the following examples too.
+
+### Stores
+Sample store data seeded for development purposes only.
+
+| StoreId  | OutletName     |
+|----------|----------------|
+| store101 | Fresh Picks    |
+| store102 | Natural Choice |
+
+### Grocery Products
+Dummy Products for Stores to sell and users to buy from.
+
+| ProductId  | ProductName | StoreRefId |
+|------------|-------------|------------|
+| product101 | Wheat Bread | store101   |
+| product102 | Spinach     | store101   |
+| product103 | Crackers    | store101   |
 
 ### Tech Requirements
 
