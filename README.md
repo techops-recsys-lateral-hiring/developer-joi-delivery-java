@@ -51,7 +51,7 @@ Dummy Products for Stores to sell and users to buy from.
 
 ## API
 
-Below is a list of API endpoints with their respective input and output. Please note that the application needs to be running for the following endpoints to work. For more information about how to run the application, please refer to run the application section above.
+Below is a list of API endpoints with their respective input and output. Please note that the application needs to be running for the following endpoints to work. For more information about how to [run the application](https://github.com/techops-recsys-lateral-hiring/joi-delivery-java?tab=readme-ov-file#run-the-application), please refer to run the application section above.
 
 ### Add Product to Cart
 EndPoint
