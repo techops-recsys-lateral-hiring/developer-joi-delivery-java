@@ -49,12 +49,121 @@ Dummy Products for Stores to sell and users to buy from.
 | product102 | Spinach     | store101   |
 | product103 | Crackers    | store101   |
 
-### Tech Requirements
+## API
 
-Java version 24
+Below is a list of API endpoints with their respective input and output. Please note that the application needs to be running for the following endpoints to work. For more information about how to run the application, please refer to run the application section above.
+
+### Add Product to Cart
+EndPoint
+```
+POST /cart/product
+```
+
+Request Body
+```
+{
+    userId: "",
+    outletId: "",
+    productId: ""
+}
+```
+
+Response Body
+```
+{
+    cart: {
+        cartId:"",
+        outlet:"", 
+        products:[],
+        user:""
+    },
+    product: {},
+    sellingPrice: 
+}
+```
+
+### View Cart
+EndPoint
+```GET /cart/view?userId=<userId>```
+
+Response Body
+```
+{
+    cartId: "",
+    outlet:"",
+    products: [],
+    user:""
+}
+```
+
+### Inventory Health
+EndPoint
+```GET /inventory/health?storeid=<storeid>```
+
+Response Body 
+```
+{ 
+    //to be implemented.
+}
+```
+## Tech Requirements
+The project requires Java 24. If you have multiple JVMs on your machine, you might want to 
+consider using a tool such as [sdkman](https://sdkman.io/) to handle switching between versions.
+
+The project makes use of Gradle and uses the Gradle wrapper, which means you don't need Gradle installed.
+
+### Installing Java
+
 Install java using homeBrew
 ```console
 brew install openjdk@24
 ```
 
+Installing java on Windows, [refer](https://www.java.com/en/download/help/windows_manual_download.html#xd_co_f=NzA3YTZmNzAtOTEzMS00OWFiLTk2NjUtODg0NjNhMjRhMjkw~)
+
+Other ways to Download and install java, [refer](https://www.oracle.com/in/java/technologies/downloads/#java24).
+
 #### Verify Java Version Installed
+```console
+ java -version
+```
+
+### Useful Gradle commands
+#### List all Gradle tasks
+List all the tasks that Gradle can run, such as ```build ``` and ```test```.
+```
+$ ./gradlew tasks
+```
+
+#### Build the project
+Compiles the project, runs the test and then creates an executable JAR file
+```
+$ ./gradlew build
+```
+Run the application using Java and the executable JAR file produced by the Gradle ```build``` task. The application will be listening on port ```8080```.
+```
+$ java -jar build/libs/developer-joyofenergy-java.jar
+```
+
+#### Run the tests
+There are two types of tests, the unit tests and the functional tests. These can be executed as follows.
+
+* Run unit tests only
+```
+$ ./gradlew test
+```
+* Run functional tests only
+```
+$ ./gradlew functionalTest
+```
+* Run both unit and functional tests
+```
+$ ./gradlew check
+```
+
+#### Run the application
+Run the application which will be listening on port ```8080```.
+```
+$ ./gradlew bootRun
+```
+

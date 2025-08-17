@@ -1,5 +1,6 @@
 package com.tw.joi.delivery.domain;
 
+import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -13,6 +14,6 @@ public abstract class Product {
 
     protected String productId;
     protected String productName;
-    protected Float mrp;
+    protected BigDecimal mrp;
 
 }

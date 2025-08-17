@@ -1,5 +1,6 @@
 package com.tw.joi.delivery.domain;
 
+import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -12,8 +13,8 @@ import lombok.Setter;
 @AllArgsConstructor
 public class GroceryProduct extends Product {
 
-    private Float sellingPrice;
-    private Float weight;
+    private BigDecimal sellingPrice;
+    private BigDecimal weight;
 
     private int expiryDate;
 
@@ -21,14 +22,14 @@ public class GroceryProduct extends Product {
 
     private int availableStock;
 
-    private float discount;
+    private BigDecimal discount;
 
     private GroceryStore store;
 
     @Builder
-    public GroceryProduct(String productId, String productName, Float mrp, Cart cart,
-                          Float sellingPrice, Float weight, int expiryDate, int threshold,
-                          int availableStock, GroceryStore store, float discount) {
+    public GroceryProduct(String productId, String productName, BigDecimal mrp, Cart cart,
+                          BigDecimal sellingPrice, BigDecimal weight, int expiryDate, int threshold,
+                          int availableStock, GroceryStore store, BigDecimal discount) {
         super(productId, productName,  mrp);
         this.sellingPrice = sellingPrice;
         this.weight = weight;

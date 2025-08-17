@@ -4,6 +4,7 @@ import com.tw.joi.delivery.domain.Cart;
 import com.tw.joi.delivery.domain.GroceryProduct;
 import com.tw.joi.delivery.domain.GroceryStore;
 import com.tw.joi.delivery.domain.User;
+import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -62,8 +63,8 @@ public class SeedData {
         return GroceryProduct.builder()
             .productName(productName)
             .productId(productId)
-            .mrp(10.5f)
-            .weight(500.00f)
+            .mrp(BigDecimal.valueOf(10.5))
+            .weight(BigDecimal.valueOf(500.00))
             .store(store)
             .threshold(10)
             .availableStock(30)
