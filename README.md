@@ -54,58 +54,95 @@ Dummy Products for Stores to sell and users to buy from.
 Below is a list of API endpoints with their respective input and output. Please note that the application needs to be running for the following endpoints to work. For more information about how to run the application, please refer to run the application section above.
 
 ### Add Product to Cart
-EndPoint
-```
+```http
 POST /cart/product
+Content-Type: application/json
 ```
 
 Request Body
-```
+```json
 {
-    userId: "",
-    outletId: "",
-    productId: ""
+  "userId": "user101",
+  "productId": "product101",
+  "outletId": "store101"
 }
 ```
 
 Response Body
-```
+```json
 {
-    cart: {
-        cartId:"",
-        outlet:"", 
-        products:[],
-        user:""
-    },
-    product: {},
-    sellingPrice: 
+  "cart": {
+    "cartId": "cart101",
+    "outlet": null,
+    "products": [
+      {
+        "productId": "product103",
+        "productName": "Crackers",
+        "mrp": 10.5,
+        "sellingPrice": null,
+        "weight": 500,
+        "expiryDate": 0,
+        "threshold": 10,
+        "availableStock": 30,
+        "discount": null,
+        "store": {
+          "name": "Fresh Picks",
+          "description": null,
+          "outletId": "store101",
+          "inventory": []
+        }
+      }
+    ],
+    "user": null
+  },
+  "product": {
+    "productId": "product103",
+    "productName": "Crackers",
+    "mrp": 10.5,
+    "sellingPrice": null,
+    "weight": 500,
+    "expiryDate": 0,
+    "threshold": 10,
+    "availableStock": 30,
+    "discount": null,
+    "store": {
+      "name": "Fresh Picks",
+      "description": null,
+      "outletId": "store101",
+      "inventory": []
+    }
+  },
+  "sellingPrice": null
 }
 ```
 
 ### View Cart
-EndPoint
-```GET /cart/view?userId=<userId>```
+```http
+GET /cart/view?userId=user101
+```
 
 Response Body
-```
+```json
 {
-    cartId: "",
-    outlet:"",
-    products: [],
-    user:""
+  "cartId": "cart101",
+  "outlet": null,
+  "products": [],
+  "user": null
 }
 ```
 
 ### Inventory Health
-EndPoint
-```GET /inventory/health?storeid=<storeid>```
+```http
+GET /inventory/health?storeid=<storeid>
+```
 
 Response Body 
-```
-{ 
-    //to be implemented.
+```json lines
+{
+    // to be implemented.
 }
 ```
+
 ## Tech Requirements
 The project requires Java 24. If you have multiple JVMs on your machine, you might want to 
 consider using a tool such as [sdkman](https://sdkman.io/) to handle switching between versions.
