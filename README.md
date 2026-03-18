@@ -144,7 +144,7 @@ Response Body
 ```
 
 ## Tech Requirements
-The project requires Java 24. If you have multiple JVMs on your machine, you might want to 
+The project requires Java 25. If you have multiple JVMs on your machine, you might want to 
 consider using a tool such as [sdkman](https://sdkman.io/) to handle switching between versions.
 
 The project makes use of Gradle and uses the Gradle wrapper, which means you don't need Gradle installed.
@@ -153,12 +153,12 @@ The project makes use of Gradle and uses the Gradle wrapper, which means you don
 
 Install java using homeBrew
 ```console
-brew install openjdk@24
+brew install openjdk@25
 ```
 
 Installing java on Windows, [refer](https://www.java.com/en/download/help/windows_manual_download.html#xd_co_f=NzA3YTZmNzAtOTEzMS00OWFiLTk2NjUtODg0NjNhMjRhMjkw~)
 
-Other ways to Download and install java, [refer](https://www.oracle.com/in/java/technologies/downloads/#java24).
+Other ways to Download and install java, [refer](https://www.oracle.com/in/java/technologies/downloads/#java25).
 
 #### Verify Java Version Installed
 ```console
@@ -199,5 +199,3 @@ List all the tasks that Gradle can run, such as ```build ``` and ```test```.
 ```bash
 $ ./gradlew tasks
 ```
-
-> Note: We are currently using Java 24, which is not an LTS version. Once Java 25 is released, we will upgrade to it.
